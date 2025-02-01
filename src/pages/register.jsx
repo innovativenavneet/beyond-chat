@@ -13,11 +13,15 @@ const AuthPage = ({ setClientName }) => {
 
   const handleGoogleSignIn = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      const displayName = user.displayName;
+      setClientName(displayName);
       toast.success("Signed in with Google!");
       navigate("/setup");
     } catch (error) {
       toast.error("Google sign-in failed!");
+      console.log(error);
     }
   };
 
