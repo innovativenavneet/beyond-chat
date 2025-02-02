@@ -11,7 +11,7 @@ const Setup = ({ clientName }) => {
 
   const fetchMetaDescription = async (website) => {
     try {
-      const apiKey = "bd1f0857-1a85-4051-9aaa-cd29ca6f7308";
+      const apiKey = "648945a6-f6c6-4866-9c7e-be7685526884";
       const encodedWebsite = encodeURIComponent(website);
       const url = `https://opengraph.io/api/1.1/site/${encodedWebsite}?app_id=${apiKey}&cache_ok=false&full_render=true`;
       console.log("Fetching URL:", url);
